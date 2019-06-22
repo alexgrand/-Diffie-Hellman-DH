@@ -29,3 +29,12 @@ class DH_Endpoint():
         for c in encrypted_message:
             decrypted_message += chr(ord(c) - key)
         return decrypted_message
+
+
+message = "This is a very secret message!!!"
+s_public = 197
+s_private = 199
+m_public = 151
+m_private = 157
+Sadat = DH_Endpoint(s_public, m_public, s_private)
+Michael = DH_Endpoint(s_public, m_public, m_private)
